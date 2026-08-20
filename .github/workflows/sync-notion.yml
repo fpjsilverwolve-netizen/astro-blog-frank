@@ -2,18 +2,20 @@ name: Sync Notion Database to Markdown
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # 每6小时运行一次
-  workflow_dispatch:       # 支持在 Actions 页面手动点击运行
+    - cron: '0 */6 * * *'  # 每6小时自动运行一次
+  workflow_dispatch:       # 支持在 GitHub 页面手动触发运行
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # 1. Checkout 升级至 v4 对应的最新小版本（或 v5）
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
+      # 2. setup-python 升级至原生支持 Node 24 的 v7 版本
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.10'
 
@@ -28,8 +30,9 @@ jobs:
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         run: python scripts/sync_notion.py
 
+      # 3. git-auto-commit-action 升级至原生支持 Node 24 的 v7 版本
       - name: Commit and Push Changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'docs: auto sync posts from Notion'
           file_pattern: 'posts/*'
