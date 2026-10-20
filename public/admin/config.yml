@@ -1,24 +1,21 @@
 backend:
   name: github
-  repo: https://github.com/fpjsilverwolve-netizen/astro-blog-frank/ # 替换为你的 GitHub 仓库路径
-  branch: main # 你的主分支名称，如 main
-  base_url: https://broken-wave-2196.fpjsilverwolve.workers.dev/ # 使用 Decap 提供的公共认证 Gateway（或者自行托管在 Worker 上）
+  repo: https://github.com/fpjsilverwolve-netizen/astro-blog-frank
+  branch: main
+  base_url: https://broken-wave-2196.fpjsilverwolve.workers.dev/
   auth_endpoint: auth
-# 资源文件（如文章插图等）存储路径
+
 media_folder: "public/fonts"
 public_folder: "/public"
 
-# 配置博客文章/Content Collection 的字段
 collections:
   - name: "blog"
     label: "博客文章"
-    folder: "src/content/blog" # 你的 Astro 博客 Markdown/MDX 存放目录
+    folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "文章标题", name: "title", widget: "string" }
       - { label: "发布时间", name: "pubDate", widget: "datetime" }
       - { label: "文章摘要", name: "description", widget: "text" }
-      - { label: "封面图片", name: "image", widget: "image", required: false }
-      - { label: "标签/分类", name: "tags", widget: "list", required: false }
       - { label: "文章正文", name: "body", widget: "markdown" }
