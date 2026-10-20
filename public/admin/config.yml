@@ -2,7 +2,8 @@ backend:
   name: github
   repo: https://github.com/fpjsilverwolve-netizen/astro-blog-frank/ # 替换为你的 GitHub 仓库路径
   branch: main # 你的主分支名称，如 main
-
+base_url: https://api.decapcms.org # 使用 Decap 提供的公共认证 Gateway（或者自行托管在 Worker 上）
+  auth_endpoint: auth
 # 资源文件（如文章插图等）存储路径
 media_folder: "public/fonts"
 public_folder: "/public"
