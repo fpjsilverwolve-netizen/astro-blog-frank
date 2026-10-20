@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: https://github.com/fpjsilverwolve-netizen/astro-blog-frank
+  repo: fpjsilverwolve-netizen/astro-blog-frank
   branch: main
   base_url: https://broken-wave-2196.fpjsilverwolve.workers.dev
   auth_endpoint: auth
