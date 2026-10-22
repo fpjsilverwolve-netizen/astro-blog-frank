@@ -1,0 +1,32 @@
+[
+  {
+    "category": "常用推荐",
+    "icon": "i-tabler-star",
+    "items": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com",
+        "desc": "全球最大的代码托管与版本控制平台",
+        "icon": "https://github.githubassets.com/favicons/favicon.svg"
+      },
+      {
+        "title": "Astro 官网",
+        "url": "https://astro.build",
+        "desc": "一个用于构建快速、内容驱动的现代化网页的框架",
+        "icon": "https://astro.build/favicon.svg"
+      }
+    ]
+  },
+  {
+    "category": "开发工具",
+    "icon": "i-tabler-code",
+    "items": [
+      {
+        "title": "MDN Web Docs",
+        "url": "https://developer.mozilla.org",
+        "desc": "Mozilla 开发者文档，Web 技术的权威参考",
+        "icon": "https://developer.mozilla.org/favicon-48x48.png"
+      }
+    ]
+  }
+]
