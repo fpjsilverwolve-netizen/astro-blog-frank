@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseLayout from '../src/layouts'; // 根据你的博客布局路径调整
+import WebstackNav from '../components/WebstackNav.astro';
 ---
 
 <!doctype html>
@@ -13,8 +15,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		---
-import BaseLayout from '../layouts/BaseLayout.astro'; // 根据你的博客布局路径调整
-import WebstackNav from '../components/WebstackNav.astro';
+
 ---
 
 <BaseLayout title="我的博客首页">
